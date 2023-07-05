@@ -1,2 +1,2 @@
-# My_Portfolio
-This is my portfolio project
+# Query_Generater
+This is a simple project for Query Generater
