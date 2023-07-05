@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quote Generater</title
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Cinzel', serif;
+        }
+        body{
+            width: 100%;
+            height: 100vh;
+            background: url(https://images.unsplash.com/photo-1613893619627-373f890f03c9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8d2luZG93JTIwc2hhZG93fGVufDB8fDB8fHww&w=1000&q=80);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .content{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        .content1{
+            width: 900px;
+            height: 450px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            border-radius: 30px;
+            box-shadow: 3px 3px 30px 1px rgb(98, 95, 95);
+        }
+        .content1:hover{
+            box-shadow: 3px 3px 30px 1px black;
+        }
+        .quotes p,h3{
+            font-size: 1.6em;
+            color: black;
+        }
+        .quotes{
+            width: 900px;
+            height: 450px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 0 50px;
+            position: relative;
+        }
+        #author{
+            /* margin: 30px 0 30px 0; */
+            position: absolute;
+            text-align: center;
+            bottom: 70px;
+        }
+        #quote{
+            position: absolute;
+            top: 150px;
+            text-align: center;
+        }
+        button{
+            position: absolute;
+            bottom: 200px;
+            cursor: pointer;
+            background: rgba(255, 255, 255, 0.1);
+            color: rgb(0, 0, 0);
+            box-shadow: 3px 3px 30px 1px rgb(98, 95, 95);
+            transition: all 0.2s;
+        }
+        button:hover{
+            box-shadow: 3px 3px 30px 1px black;
+        }
+        .btn{
+            width: 150px;
+            height: 50px;
+            border-radius: 50px;
+            font-size: 20px;
+            border: 0;
+        }
+
+        @media(max-width:500px){
+            .content1{
+            width: 350px;
+            height: 600px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            border-radius: 30px;
+            box-shadow: 3px 3px 30px 1px rgb(98, 95, 95);
+        }
+        .quotes{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 0 30px;
+        }
+        #quote{
+            text-align: center;
+            margin: 0px 0 70px 0;
+        }
+        button{
+            position: absolute;
+            bottom: 200px;
+            cursor: pointer;
+            color: rgb(0, 0, 0);
+        }
+        } 
+        @media only screen and (max-width: 800px) and (min-width: 501px)  {
+            .content1{
+            width: 450px;
+            height: 600px;
+        }
+        }
+        @media only screen and (max-width: 1100px) and (min-width: 801px)  {
+            .content1{
+            width: 700px;
+            height: 800px;
+        }
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div class="content1" data-tilt>
+            <div class="quotes">
+                <p id="quote">Welcome</p>
+                <h3 id="author">Authors</h3>
+            </div>
+        </div>
+        <button onclick="generate()" type="button" class="btn">Generater...</button>
+    </div>
+
+    <script>
+        alert("Click the Generate button...")
+        function generate(){
+            let quotes = {
+                "-Oscar Wilde" : '"To live is the rarest thing in the world. Most people exist, that is all."',
+                "-Emily Dickinson" : '"That it will never come again is what makes life so sweet."',
+                "-George Eliot" : '"It is never too late to be what you might have been."',
+                "-Ralph Waldo Emerson" : '"To be yourself in a world that is constantly trying to make you something else is the greatest accomplishment."',
+                "-Haruki Murakami" : '"Pain is inevitable. Suffering is optional."',
+                "-Plato" : '"Be kind, for everyone you meet is fighting a hard battle."',
+                "-Emily Dickinson" : '"Unable are the loved to die for love is immortality."',
+                "-Sylvia Plath" : '"Let me live, love, and say it well in good sentences."',
+                "-Swami Vivekananda" : '"Take up an idea, devote yourself, struggle in patience, and the sun will rise."',
+                "-Swami Vivekananda" : '"Arise, awake, and don’t stop till you reach your goal."',
+                "-Swami Vivekananda" : '"The moral, in one word, is that you are divine."',
+                "-Swami Vivekananda" : '"In a day, when you don’t come across any problems – you can be sure that you are traveling the wrong path"',
+                "-Swami Vivekananda" : '"We are what our thoughts have made us; so take care about what you think. Words are secondary. Thoughts live; they travel far."',
+                "-Swami Vivekananda" : '"Dare to be free, dare to go as far as your thought leads and dare to carry that out in your life."',
+                "-Swami Vivekananda" : '"The great secret of true success, of true happiness is this: the man or woman who asks for no return, the perfectly unselfish person is the most successful."',
+                "-Swami Vivekananda" : '"All powers in the universe are already ours. It is we who have put our hands before our eyes and cry that it is dark."',
+                "-Swami Vivekananda" : '"If anything turns you weak physically, intellectually, and spiritually, reject it like it’s poison."',
+                "-Swami Vivekananda" : '"Talk to yourself once a day, otherwise, you may miss meeting an excellent person in this world."',
+                "-A.P.J. Abdul Kalam" : '"Dream is not that which you see while sleeping it is something that does not let you sleep."'
+            }
+            let authors = Object.keys(quotes);
+            let author = authors[Math.floor(Math.random() * authors.length)];
+            let quote = quotes[author];
+            document.getElementById("quote").innerHTML = quote;
+            document.getElementById("author").innerHTML = author;
+        }
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
+</body>
+</html>
